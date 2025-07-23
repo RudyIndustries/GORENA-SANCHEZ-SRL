@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos - Gorena Sánchez & Compañía S.R.L.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjxwYXRoIGQ9Ik0xMiAxN2MxLjEgMCAyLS45IDItMnMtLjktMi0yLTItMiAuOS0yIDIgLjkgMiAyIDJ6bTEuOS05LjhjLS4xLS4xLS4yLS4zLS4yLS41cy4xLS40LjItLjVjLjQtLjQuNC0xIDAtMS40LS40LS40LTEtLjQtMS40IDAtLjEuMS0uMy4yLS41LjJzLS40LS4xLS41LS4yYy0uNC0uNC0xLS40LTEuNCAwLS40LjQtLjQgMSAwIDEuNC4xLjEuMi4zLjIuNXMtLjEuNC0uMi41Yy0uNC40LS40IDEgMCAxLjQuNC40IDEgLjQgMS40IDAgLjEtLjEuMy0uMi41LS4ycy40LjEuNS4yYy40LjQgMSAuNCAxLjQgMCAuNC0uNC40LTEgMC0xLjR6Ii8+PC9zdmc+" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Gorena Sánchez & Compañía S.R.L.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes.html"><i class="fas fa-users"></i> Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-file-contract"></i> Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="documentos.html"><i class="fas fa-file-alt"></i> Documentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reportes.html"><i class="fas fa-chart-bar"></i> Reportes</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Wilson Mamani
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <section id="documentos">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Gestión de Documentos</h2>
+                    <p class="text-muted">Administre los documentos asociados a clientes y servicios</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDocumento"><i class="fas fa-plus"></i> Nuevo documento</button>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0">Documentos</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Tipo</th>
+                                            <th>Cliente</th>
+                                            <th>Servicio</th>
+                                            <th>Fecha</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Contrato de Servicios</td>
+                                            <td>Contrato</td>
+                                            <td>Importadora Boliviana S.A.</td>
+                                            <td>Auditoría Financiera</td>
+                                            <td>10/07/2025</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Declaración IVA Junio 2025</td>
+                                            <td>Declaración</td>
+                                            <td>Construcciones Andinas Ltda.</td>
+                                            <td>Declaración IVA</td>
+                                            <td>15/07/2025</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Informe de Revalorización</td>
+                                            <td>Informe</td>
+                                            <td>Textiles del Altiplano</td>
+                                            <td>Revalorización Activos</td>
+                                            <td>20/07/2025</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para nuevo documento -->
+            <div class="modal fade" id="modalDocumento" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Nuevo Documento</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombreDocumento" class="form-label">Nombre del Documento</label>
+                                    <input type="text" class="form-control" id="nombreDocumento" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+                                            <select class="form-select" id="tipoDocumento">
+                                                <option value="Contrato">Contrato</option>
+                                                <option value="Factura">Factura</option>
+                                                <option value="Declaración">Declaración</option>
+                                                <option value="Informe">Informe</option>
+                                                <option value="Otro">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="fechaDocumento" class="form-label">Fecha</label>
+                                            <input type="date" class="form-control" id="fechaDocumento" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="clienteDocumento" class="form-label">Cliente</label>
+                                            <select class="form-select" id="clienteDocumento">
+                                                <option value="1">Importadora Boliviana S.A.</option>
+                                                <option value="2">Construcciones Andinas Ltda.</option>
+                                                <option value="3">Textiles del Altiplano</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="servicioDocumento" class="form-label">Servicio</label>
+                                            <select class="form-select" id="servicioDocumento">
+                                                <option value="1">Auditoría Financiera</option>
+                                                <option value="2">Declaración IVA</option>
+                                                <option value="3">Consultoría Tributaria</option>
+                                                <option value="4">Revalorización Activos</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="archivoDocumento" class="form-label">Archivo</label>
+                                    <input type="file" class="form-control" id="archivoDocumento">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
